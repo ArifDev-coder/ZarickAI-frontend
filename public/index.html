@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZarickAI</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="../src/css/customs.css">
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="flex flex-row h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-800 text-white p-4 flex flex-col justify-between">
+            <h1 class="text-4xl font-bold mb-4">ZarickAI</h1>
+            <nav class="flex flex-col space-y-2">
+                <a href="#" class="text-lg hover:text-gray-400">Home</a>
+                <a href="#" class="text-lg hover:text-gray-400">About</a>
+                <a href="#" class="text-lg hover:text-gray-400">Contact</a>
+            </nav>
+            <div class="mt-auto">
+                <p>&copy; 2025 ZarickAI. All rights reserved.</p>
+            </div>
+        </div>
+        
+        <div class="w-screen bg-dark text-white p-4 flex flex-col justify-center items-center">
+            <h2 class="text-3xl font-bold mb-4">Chat with ZarickAI</h2>
+            
+            <div id="chat-box" class="flex flex-col p-4 overflow-y-auto h-full w-full border border-white">
+                <div id="loading" class="hidden justify-center my-4">
+                    <div class="w-6 h-6 border-4 border-t-blue-500 border-gray-300 rounded-full animate-spin"></div>
+                </div>
+            </div>
+
+
+            <form id="input-form" class="w-full mt-4 gap-2 flex flex-row">
+                <input type="text" autocomplete="off" id="user-input" class="w-full border border-white p-2 focus:outline-none focus:ring-0" placeholder="Type your message...">
+                <button id="send-button" class="bg-blue-500 hover:bg-blue-600 w-40 text-white  rounded">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../src/server/server.js"></script>
+</body>
+</html>
