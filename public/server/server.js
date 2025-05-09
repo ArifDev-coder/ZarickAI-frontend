@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const socket = io("http://localhost:5000");
+    const socket = io("https://arifdev.pythonanywhere.com/");
     const input = document.getElementById("user-input");
     const form = document.getElementById("input-form");
     const chatBox = document.getElementById("chat-box");    // Handle socket connection errors
