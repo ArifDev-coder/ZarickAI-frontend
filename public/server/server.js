@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle AI responses
     socket.on("response", (data) => {
         const loadingBubble = document.querySelector(".loading-bubble");
-        const timeut = Math.floor(Math.random() * 1000) + 500;
+        const timeut = Math.floor(Math.random() * 10);
         
         const botBubble = document.createElement("div");
         botBubble.classList.add("hidden", "self-start", "max-w-[70%]", "text-white", "p-2", "rounded", "mb-2");
