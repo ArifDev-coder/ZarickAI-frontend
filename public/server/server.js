@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle AI responses
     socket.on("response", (data) => {
         const loadingBubble = document.querySelector(".loading-bubble");
-        const timeut = Math.floor(Math.random() * 5 + 1);
         
         const botBubble = document.createElement("div");
         botBubble.classList.add("hidden", "self-start", "max-w-[70%]", "text-white", "p-2", "rounded", "mb-2");
@@ -46,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 typeAnimation();
                 botBubble.classList.add("bg-gray-700");
                 
-            }, timeut);
+            }, 1000);
 
         }
     });
